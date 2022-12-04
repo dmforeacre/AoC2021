@@ -1,2 +1,5 @@
 !*.rs
 *.txt
+*.lock
+*.toml
+target/*
