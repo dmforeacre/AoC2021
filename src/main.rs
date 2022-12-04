@@ -1,4 +1,5 @@
 use std::time::Instant;
+extern crate itertools;
 use itertools::Itertools;
 
 mod day1;
@@ -7,7 +8,7 @@ mod day3;
 mod day4;
 
 fn main() {
-    let mut clock = Instant::now();
+    let clock = Instant::now();
 
     for i in 1..5 {
         for j in 1..3 {
