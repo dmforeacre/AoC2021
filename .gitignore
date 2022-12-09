@@ -3,4 +3,9 @@
 *.pdb
 *.lock
 *.toml
+
+# Anything in target directory
+\target\*
+
+# Anything that isn't Rust code?
 !*.rs
