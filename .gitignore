@@ -1,4 +1,6 @@
 *.txt
 *.exe
 *.pdb
+*.lock
+*.toml
 !*.rs
