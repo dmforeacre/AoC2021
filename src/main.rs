@@ -24,7 +24,7 @@ fn main() {
     println!("╠═════════════════╬═════════════════════╦═══════════════════╦═══════════════════╦════════════════╣");
 
     if args[1] == "all" {
-        for i in 1..6 {
+        for i in 1..7 {
             for j in 1..3 {
                 results = func_map(results, i, j);
             }
@@ -48,7 +48,6 @@ fn main() {
     println!("                  ╚═════════════════════╩═══════════════════╩═══════════════════╩════════════════╝");
 }
 
-#[allow(unused_assignments)]
 fn func_map(mut results: Vec::<OutputStruct::OutputStruct> ,day: u32, part: u32) -> Vec<OutputStruct::OutputStruct> {
     //println!("Starting {day}-{part}...");
 
