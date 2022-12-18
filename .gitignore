@@ -5,7 +5,7 @@
 *.toml
 
 # Anything in target directory
-target\*
+target/*
 
 # Anything that isn't Rust code?
 !*.rs

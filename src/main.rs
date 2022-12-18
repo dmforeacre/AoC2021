@@ -14,6 +14,8 @@ mod day7;
 mod day8;
 mod day9;
 
+const MAX_DAY: u32 = 8;
+
 fn main() {
     let args: Vec<String> = env::args().collect();
 
@@ -24,7 +26,7 @@ fn main() {
     println!("╠═════════════════╬═════════════════════╦═══════════════════╦═══════════════════╦════════════════╣");
 
     if args[1] == "all" {
-        for i in 1..7 {
+        for i in 1..MAX_DAY + 1 {
             for j in 1..3 {
                 results = func_map(results, i, j);
             }
