@@ -13,8 +13,9 @@ mod day6;
 mod day7;
 mod day8;
 mod day9;
+mod day10;
 
-const MAX_DAY: u32 = 8;
+const MAX_DAY: u32 = 10;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -41,9 +42,11 @@ fn main() {
     let mut tTotal = 0;
     let size = results.len() as u128;
     for r in results {
-        iTotal += r.parseTime;
-        cTotal += r.calcTime;
-        tTotal += r.parseTime + r.calcTime;
+        if r.parseTime != 0 {
+            iTotal += r.parseTime;
+            cTotal += r.calcTime;
+            tTotal += r.parseTime + r.calcTime;
+        }
     }
     println!("                  ║          Totals:    ║{:>17}  ║{:>17}  ║{:>14}  ║", iTotal, cTotal, tTotal);
     println!("                  ║          Averages:  ║{:>17}  ║{:>17}  ║{:>14}  ║", iTotal / size, cTotal / size, tTotal / size);
@@ -73,6 +76,8 @@ fn func_map(mut results: Vec::<OutputStruct::OutputStruct> ,day: u32, part: u32)
         (8, 2) => output = day8::pt2::pt2(),
         (9, 1) => output = day9::pt1::pt1(),
         (9, 2) => output = day9::pt2::pt2(),
+        (10, 1) => output = day10::pt1::pt1(),
+        (10, 2) => output = day10::pt2::pt2(),
         _ => println!("Problem not found")
     }
 
